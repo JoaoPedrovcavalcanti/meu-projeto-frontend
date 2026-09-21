@@ -1,0 +1,17 @@
+{
+  "name": "Cartas do Clash Royale",
+  "short_name": "Cartas CR",
+  "description": "Aplicação para cadastrar e explorar cartas do Clash Royale",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eef1fb",
+  "theme_color": "#1a3b8f",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

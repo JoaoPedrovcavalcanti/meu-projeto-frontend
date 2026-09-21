@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a3b8f">
+    <title>Cartas do Clash Royale</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>👑 Cartas do Clash Royale</h1>
+        <p>Cadastre e explore as cartas da sua coleção</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="painel">
+        <h2 id="titulo-formulario">Nova carta</h2>
+
+        <form id="form-carta">
+          <input type="hidden" id="carta-id">
+
+          <label for="nome">Nome da carta</label>
+          <input id="nome" name="nome" type="text" placeholder="Ex: Gigante" required>
+
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecione...</option>
+            <option value="Tropa">Tropa</option>
+            <option value="Feitiço">Feitiço</option>
+            <option value="Estrutura">Estrutura</option>
+          </select>
+
+          <label for="raridade">Raridade</label>
+          <select id="raridade" name="raridade" required>
+            <option value="">Selecione...</option>
+            <option value="Comum">Comum</option>
+            <option value="Rara">Rara</option>
+            <option value="Épica">Épica</option>
+            <option value="Lendária">Lendária</option>
+            <option value="Campeão">Campeão</option>
+          </select>
+
+          <label for="custoElixir">Custo de elixir</label>
+          <input id="custoElixir" name="custoElixir" type="number" min="0" max="10" required>
+
+          <label for="imagemUrl">URL da imagem (opcional)</label>
+          <input id="imagemUrl" name="imagemUrl" type="url" placeholder="https://...">
+
+          <div class="acoes-formulario">
+            <button type="submit" id="botao-salvar">Cadastrar</button>
+            <button type="button" id="botao-cancelar" class="secundario oculto">
+              Cancelar edição
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="painel">
+        <div class="cabecalho-lista">
+          <h2>Cartas cadastradas</h2>
+          <button type="button" id="botao-atualizar" class="secundario">Atualizar lista</button>
+        </div>
+
+        <form id="form-busca" class="busca">
+          <label for="busca-id">Buscar carta pelo ID</label>
+          <div class="linha-busca">
+            <input id="busca-id" type="text" placeholder="Informe o ID da carta">
+            <button type="submit">Buscar</button>
+            <button type="button" id="botao-limpar-busca" class="secundario">Listar todas</button>
+          </div>
+        </form>
+
+        <p id="mensagem" role="status" aria-live="polite"></p>
+        <div id="lista-cartas" class="lista-cartas"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
