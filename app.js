@@ -1,6 +1,6 @@
 // Troque essa URL pela URL pública do backend depois do deploy no Render,
 // ex: "https://seu-backend.onrender.com/cartas"
-const API_URL = "http://localhost:3000/cartas";
+const API_URL = "https://meu-projeto-backend-q93q.onrender.com";
 
 const formulario = document.querySelector("#form-carta");
 const campoId = document.querySelector("#carta-id");
